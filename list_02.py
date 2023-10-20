@@ -1,29 +1,30 @@
 import random
 a = random.randrange(4,10)
 b = random.randrange(2,6)
-s = ""
-c = ""
-w = 0
-v = 1
 
 print("a = ",a)
 print("b = ",b)
 print()
 
 lst = [1,3,5,7,9,11,13,15,17,19]
+print(lst)
 
 z = lst[0]
 y = lst[-1]
 
 lst[-1] = z
 lst[0] = y
+print(lst)
 
+s = ""
 for x in lst:
   s = s + str(x) + ", "
 print(s.removesuffix(", "))
 print()
-s = ""
 
+w = 0
+v = 1
+c = ""
 for y in range (1,a+1):
   for x in lst:
     w = x * b * v
@@ -32,9 +33,6 @@ for y in range (1,a+1):
   print(c.removesuffix(", "))
   c = ""
   v = v * b
-
-
-
 
 # you are given a list lst = [1,3,5,7,9,11,13,15,17,19]
 # initiate $a as random INT from 4 to 10; print it, as 'a = $a'
