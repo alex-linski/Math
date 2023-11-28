@@ -1,5 +1,6 @@
-import list_05
-#math_while_02
+import dict_05
+
+# math_while_02
 # August 01, 2023, math_01
 # August 03, 2023, math_02
 # August 04, 2023, math_if_03

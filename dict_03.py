@@ -1,4 +1,57 @@
+import random
+lst = []
+lst2 = []
+lst3 = []
 
+for a in range (1,21):
+  b = random.randrange(1,16)
+  lst.append(b)
+  lst2.append(b)
+
+print(lst)
+print()
+
+for x in lst:
+  z = 0
+  for y in lst2:
+    if x == y:
+      z += 1
+  if z > 1:
+    lst2.remove(x)
+
+print(lst2)
+print()
+lst3 = lst2.copy()
+
+for x in lst3:
+  for y in range (12,16):
+    if x == y:
+      lst3.remove(x)
+      
+print(lst3)
+print()
+
+import calendar
+months = calendar.month_name[1:]
+
+dict = {}
+dict1 = {}
+
+for x in lst3:
+  dict[x] = months[x -1]
+
+print(dict)
+print()
+
+days = calendar.day_name[0:]
+
+for x in lst3:
+  if x < 8:
+    dict1[x] = days[x -1]
+  else:
+    dict1[x] = ""
+
+print(dict1)
 # generate a list $lst, containing 20 members, each member a random INT, from 0 to 15; print it
 # remove all duplicates from this list
 # remove all list members bigger than 11
